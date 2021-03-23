@@ -3,6 +3,7 @@
     <head>
         <title>Giro d'Italia</title>
         <link rel="stylesheet" href="style.css">
+        <script language="JavaScript" type="text/JavaScript" src="script.js"></script>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
@@ -216,39 +217,5 @@
                 <p>Bartoli Matteo<br>4° G</p>
             </footer>
         </div>
-
-        <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-            }
-
-            function openSite() {
-                document.getElementById("title").innerHTML = "EDIZIONE 2021";
-                document.getElementById("subtitle").innerHTML = "la 100 edizione";
-            }
-        </script>
     </body>
 </html>
